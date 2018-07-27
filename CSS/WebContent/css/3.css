@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+.h1{
+	font-family:SimHei;
+}
+.t1{
+	margin-left:35px;
+}
+
+.tr1 .td1{
+	font-family:SimHei;
+	padding-top:10px;
+}
+.tr2 .td2{
+	font-family:SimHei;
+	color:#936368;
+	padding-top:10px;
+}
+
+.tr3 .td3{
+	color:blue;
+	font-family:SimHei;
+	padding-top:10px;
+}

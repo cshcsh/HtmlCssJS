@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+label{
+	color:#416FBC;
+	font-family:SimHei;
+	margin-left:10px;
+}
+
+.d{
+	width:25%;
+	margin:auto;
+	margin-top:3%;
+	background: -prefix-linear-zgradient(top, #FEFED9, #F8FBE9); 
+ 	background:linear-gradient(to bottom, #FEFED9, #F8FBE9);
+}
+
+.d1{
+	background:#518700;
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:10px;	
+}
+.l1{
+	color:white;
+	font-size:23px;
+	vertical-align:middle;
+}
+
+.i1{
+	width:30px;
+	height:30px;
+	vertical-align:middle;
+}
+
+.d2{
+	
+ 	margin-left:55px;
+}
+
+.d21{
+	margin-top:15px;
+}
+
+#d21{
+	margin-top:30px;
+}
+.df{
+	padding-bottom:80px;
+}

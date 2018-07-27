@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+#li{
+font-size: 50px;
+color: lime;
+}
+
+#ol #a{
+	color:red;
+}
+.aaa{
+	color:green;
+}

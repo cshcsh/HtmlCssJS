@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+h1{
+	color:#4069B0;
+	font-family:SimHei;
+}
+.p1 .a1{
+	color:red;
+	font-weight: bold;
+}
+
+.p1 .s1{
+	color:#5A8AD8;
+	font-weight: bold;
+}
+
+.p1 .s2{
+	color:orange;
+	font-weight: bold;
+}
+
+.p1 .s3{
+	color:green;
+	font-weight: bold;
+}
+
+.p1 .s4{
+	color:orange;
+	font-weight: bold;
+}
+
+.i1{
+	width:140px;
+	height:250px;
+}

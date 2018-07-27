@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.i1{
+	width:680px;
+	height:300px;
+}
+.i2{
+	margin-top:5px;
+	width:150px;
+	height:40px;
+}
+.i3{
+	width:150px;
+	height:40px;
+}
+
+.i4{
+	width:150px;
+	height:40px;
+}
+
+.p1{
+	font-size:11px;
+}
+
+h5{
+	color:blue;
+}
+.h1{
+	color:red;
+	margin-top:10px;
+}
