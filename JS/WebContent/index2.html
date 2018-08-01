@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function showclock() {
+		var d, s = " 日期是: ";
+		var d = new Date();
+		s += d.getFullYear() + "/";
+		s += (d.getMonth() + 1) + "/";
+		s += d.getDate() + "    ";
+		var x = new Array("星期日", "星期一", "星期二");
+		var x = x.concat("星期三", "星期四", "星期五");
+		var x = x.concat("星期六");
+		d = new Date();
+		day = d.getDay();
+		s += x[day] + " "
+
+		var c = ":";
+		s += d.getHours() + c;
+		s += d.getMinutes() + c;
+		s += d.getSeconds();
+		/*s += d.getMilliseconds();*/
+		document.write(s);
+	}
+</script>
+</head>
+<body onload="showclock()">
+
+</body>
+</html>

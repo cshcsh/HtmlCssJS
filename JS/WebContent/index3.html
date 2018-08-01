@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aa() {
+		alert(11);
+	}
+	function bb() {
+		setTimeout("aa()", 3000);
+		alert(22);
+	}
+	function cc() {
+		setTimeout("cc()", 3000);
+		alert(33);
+	}
+	function dd() {
+		var time = showclock();
+		//alert(time);
+		document.getElementById("time").innerHTML = "<b>" + time + "</b>";
+		setTimeout("dd()", 3000);
+	}
+	function showclock() {
+		var d, s = " 日期是: ";
+		var d = new Date();
+		s += d.getFullYear() + "/";
+		s += (d.getMonth() + 1) + "/";
+		s += d.getDate() + "    ";
+		var x = new Array("星期日", "星期一", "星期二");
+		var x = x.concat("星期三", "星期四", "星期五");
+		var x = x.concat("星期六");
+		d = new Date();
+		day = d.getDay();
+		s += x[day] + " "
+		var c = ":";
+		s += d.getHours() + c;
+		s += d.getMinutes() + c;
+		s += d.getSeconds();
+		/*s += d.getMilliseconds();*/
+		return s;
+	}
+	function opem() {
+		open("05input.html", "", 'width=2000,height=100');
+	}
+	function closem() {
+		window.close();
+	}
+	function del() {
+		var s = window.confirm("确定删除?")
+		if (s) {
+			alert("确定删除");
+		} else {
+			alert("取消删除");
+		}
+
+	}
+	function opddddem() {
+		this.s = setInterval("aa()", 3000);
+	}
+	function clss() {
+		clearInterval(this.s);
+	}
+</script>
+
+</head>
+<body>
+	<input type="button" onclick="aa()" value="点击">
+	<br>
+	<input type="button" onclick="bb()" value="延迟调用">
+	<br>
+	<input type="button" onclick="cc()" value="循环调用">
+	<br>
+	<input type="button" onclick="dd()" value="编写时间">
+	<br>
+	<input type="button" onclick="opem()" value="打开">
+	<br>
+	<input type="button" onclick="closem()" value="关闭">
+	<br>
+	<input type="button" onclick="del()" value="删除">
+	<br>
+	<input type="button" onclick="opddddem()" value="循环调用">
+	<br>
+	<input type="button" onclick="clss()" value="关闭循环调用">
+	<br>
+	<div id="time"></div>
+
+
+
+</body>
+</html>

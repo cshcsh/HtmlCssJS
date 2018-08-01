@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+}
+</style>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#addstu").hide();
+		$("#add").click(function() {
+			$("#addstu").show();
+		});
+
+		/**完成添加一行**/
+		$("#save").click(
+				function() {
+					var id = $("#id").val();
+					var username = $("#username").val();
+					//在   main中添加tr
+					$("#main").append(
+							"<tr>" + "<td>" + id + "</td>" + "<td>" + username
+									+ "</td>" + "<td>update</td>"
+									+ "<td>del</td>" + " </tr>");
+					var dels = $("table tbody tr td:last-child");
+					dels.click(function() {
+						$(this).parents("tr").remove();
+					});
+					$("#addstu").hide();
+				});
+
+		/*********完成删除功能************************/
+		var dels = $("table tbody tr td:last-child");
+		dels.click(function() {
+			$(this).parents("tr").remove();
+		});
+		/**************完成修改功能*******************/
+		var updates = $("table tbody tr td:nth-child(3)");
+		updates.click(function() {
+			var tr = $(this).parents("tr");
+			tr.html("<td><input type='text' id='id1'></td>"
+					+ "<td><input type='text' id='username2'></td>"
+					+ "<td class='aa' colspan='2'>edit</td>");
+			$(".aa").click(
+					function() {
+						var id = $("#id1").val();
+						var username = $("#username2").val();
+
+						$(this).parents("tr").html(
+								"<td>" + id + "</td>" + "<td>" + username
+										+ "</td>" + "<td>update</td>"
+										+ "<td>del</td>");
+
+					})
+
+		});
+		/************************************************/
+
+	});
+</script>
+
+</head>
+<body>
+	<table border="1px">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>账号</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="main">
+			<tr id="tr1">
+				<td>1</td>
+				<td>1</td>
+				<td>update</td>
+				<td>del</td>
+			</tr>
+			<tr id="tr2">
+				<td>2</td>
+				<td>2</td>
+				<td>update</td>
+				<td colspan="2">del</td>
+			</tr>
+			<tr id="tr3">
+				<td>3</td>
+				<td>3</td>
+				<td>update</td>
+				<td>del</td>
+			</tr>
+
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><input type="button" id="add" value="add"></td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr>
+	<div id="addstu">
+		<input type="text" id="id"><br> <input type="text"
+			id="username"><br> <input type="button" value="save"
+			id="save"><br>
+	</div>
+
+</body>
+</html>

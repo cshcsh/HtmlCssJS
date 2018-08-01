@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+
+		//	alert(imgs.length)
+		//	alert(imgs[0].src)
+		var but = document.getElementById("but");
+		/*   but.onclick=function(){
+		  	// alert(1)
+		  	imgs[0].src=srcs[1];
+		  }*/
+		but.onclick = bian;
+
+	}
+	var i = 0;
+	var srcs = [ "images/js/00.jpg", "images/js/01.jpg", "images/js/02.jpg",
+			"images/js/03.jpg" ];
+	function bian() {
+		var imgs = document.images;
+		if (i < 4) {
+			i++;
+		} else {
+			i = 0;
+		}
+		imgs[0].src = srcs[i];
+		/* alert(1);*/
+		setTimeout("bian()", 3000);
+	}
+</script>
+</head>
+<body>
+	<img alt="" src="images/r.png">
+	<br>
+	<input type="button" id="but">
+	<!-- 
+<img alt="" src="image/wish02.jpg"><br>
+<img alt="" src="image/wish03.jpg"><br>
+<img alt="" src="image/wish04.jpg"><br>
+<img alt="" src="image/wish05.jpg"><br>
+ -->
+
+</body>
+</html>
